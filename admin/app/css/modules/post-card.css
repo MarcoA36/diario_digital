@@ -1,0 +1,91 @@
+.card__container{
+    width: 100%;
+}
+
+.card__wrapper {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+
+
+.card__item {
+    width: 80%;
+    border-bottom: 3px solid rgba(41, 41, 41, 0.89);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.card__item .card__title p {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card__item .card__subtitle p {
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card__item:hover {
+    cursor: pointer;
+}
+
+.card__item:hover img {
+    filter: brightness(118%);
+}
+
+.card__item img {
+    width: 300px;
+    vertical-align: middle;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.card__item .card__texts {
+    width: 100%;
+}
+
+.card__wrapper .buttons__group {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--borde-1);
+}
+
+
+.card__wrapper .buttons__group>div:hover {
+    cursor: pointer;
+    filter: brightness(118%);
+    color: var(--color-fuente-2);
+}
+
+.card__details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.button__page {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button__page button {
+    margin: auto;
+    height: 26px;
+    background-color: var(--background-1);
+    color: var(--color-fuente-1);
+}

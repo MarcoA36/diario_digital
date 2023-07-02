@@ -1,0 +1,27 @@
+/* ///////////////////// */
+/* PAGINA DE SECCIONES */
+
+.page-category .header-section {
+    text-transform: uppercase;
+}
+
+.page-category .section-featured .card__container {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 16px;
+}
+
+.page-category .section-featured .card__container--primary .card__section {
+    display: none;
+}
+
+.page-category .card__container--secondary p {
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.page-category .section-allCards {
+    margin-top: 30px;
+}

@@ -1,0 +1,21 @@
+.sidebar {
+    width: 24%;
+    height: auto;
+    /* background-color: gray; */
+}
+
+.sidebar .section-category .header-section {
+    border: none;
+    padding: 0;
+    /* text-align: center; */
+}
+
+.sidebar .section-category .card__container {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+.sidebar .section-category .card__subtitle {
+    display: none;
+}

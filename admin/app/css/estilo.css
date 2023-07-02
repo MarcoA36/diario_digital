@@ -1,0 +1,182 @@
+@import url('modules/login.css');
+@import url('modules/panel.css');
+@import url('modules/post-card.css');
+@import url('modules/post-form.css');
+@import url('modules/post.css');
+@import url('modules/message.css');
+
+:root {
+    --background-1: black;
+    --background-2: black;
+    --background-form: rgb(204, 204, 204);
+    --color-fuente-1: white;
+    --color-fuente-2: gray;
+    --color-borde: gray;
+    --color-error: red;
+    --font-family-1: Arial, Helvetica, sans-serif;
+    --font-family-2: Arial, Helvetica, sans-serif;
+    --border-radius-1: 5px;
+    --borde-1: 3px solid white;
+}
+
+
+body {
+    background-color: var(--background-1);
+    color: var(--color-fuente-1);
+    font-family: var(--font-family-1);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    max-width: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-fuente-1);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+input,
+textarea {
+    border-radius: var(--border-radius-1);
+}
+
+
+.content {
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+
+
+
+@media(max-width: 1000px) {
+    .card__wrapper {
+        flex-direction: column;
+        gap: 0px;
+        margin-bottom: 40px;
+    }
+
+    .card__item {
+        width: 100%;
+    }
+
+    .card__wrapper .buttons__group {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .form__wrapper {
+        margin: auto;
+        width: 80%;
+    }
+
+}
+
+@media(max-width: 900px) {
+
+    .card__wrapper {
+        width: 100%;
+    }
+
+    .card__item {
+        flex-direction: column;
+    }
+
+    .card__item img {
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 800px) {
+    #root {
+        flex-direction: column;
+    }
+
+    .content {
+        margin: auto;
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    .post__wrapper {
+        margin: auto;
+    }
+
+    .form__message{
+        width: 70%;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    #root {
+        width: 100%;
+    }
+
+    .content {
+        width: 96%;
+        padding-top: 60px;
+    }
+
+    .card__wrapper {
+        width: 100%;
+        padding: 4px;
+    }
+
+    .form__wrapper {
+        width: 96%;
+    }
+
+    .form__message{
+        width: 96%;
+    }
+
+
+    .message__wrapper {
+        width: 90%;
+    }
+
+    .message__item {
+        font-size: 14px;
+    }
+
+    .message__item .message__body {
+        display: none;
+    }
+
+}
+
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+@media (min-width: 360px) {}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

@@ -1,0 +1,64 @@
+/*////PORTADA PRINCIPALES////*/
+
+.section-featured .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.header-section .header-section__date {
+    font-size: 20px;
+    color: gray;
+}
+
+
+.page-home .section-featured .card__container {
+    grid-template-columns: 102fr 100fr;
+    gap: 16px;
+}
+
+
+
+.page-home .section-featured .card__container--secondary {
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 16px;
+}
+
+
+.page-home .section-featured .card__section,
+.page-home .section-featured .card__subtitle {
+    color: rgb(239, 239, 239);
+}
+
+
+/* ///////////////////// */
+/*////PORTADA SECCIONES////*/
+
+.section-category {
+    margin-top: 32px;
+}
+
+.section-category .header-section {
+    margin-bottom: 16px;
+    padding-left: 6px;
+    /* color: rgb(89, 89, 89); */
+}
+
+.section-category .header-section {
+    border-left: 3px solid red;
+}
+
+.section-category .card__texts {
+    position: relative;
+    background-color: inherit;
+    color: black;
+}
+
+.section-category .card__subtitle {
+    color: black;
+}
