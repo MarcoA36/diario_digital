@@ -1,4 +1,4 @@
-## /app
+# /app
          
 * [index.js](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/index.js) se encarga de iniciar la aplicación en el archivo HTML principal, index.html. 
 
@@ -7,22 +7,30 @@
 
 Al momento de iniciar la pagina se ejecuta la funcion App().
 
-* [App()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/App.js) obtinen el div con `id=”root”`, y le inserta mediante `appendChild()` El formulario para loguearse o la pagina de inicio dependiendo del estado de la variable de session “sesion-iniciada”, que al momento de iniciar la pagina es seteada en **false**. 
+* [App()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/App.js) obtinen el div con `id=”root”`, y le inserta mediante `appendChild()` El formulario para loguearse o la pagina de inicio dependiendo del estado de la variable de session “sesion-iniciada”, que al momento de iniciar la pagina no esta definida y por lo tanto es seteada en **false**. 
 
+## Formulario para loguearse
 Si la sesion no esta iniciada renderiza el componente [PageLogin()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PageLogin.js).
 
+
+## Pagina de inicio
 Cuando el usuario se regitra, cambia la variable de 'sesion-iniciada' a **true** y se recarga la pagina, por lo que cuando se vuelve a ejecutar App() añade la **pagina de inicio** que esta conformada por **Panel()** y **Content()**.
 
+### Panel de administracion
 * [Panel()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/Panel.js) crea el contenedor y le añade 
   * [Logo()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/Logo.js)
   * [PanelUser()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PanelUser.js)
   * [PanelMessages()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PanelUser.js)
   * [PanelMenu()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PanelMenu.js) conformado por los [LinkMenu()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/Button.js)
-                                                                                                                
+                                                                                                        
+                                                    
+## Router
 Cada boton del **menu** cambia el **hash**, haciendo que se ejecute Router() debido al `window.addEventListener('hashchange', Router)` de **index.js**. 
 
 [Router()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/js/Router.js) detecta el hash con `location.hash` y dependiendo cual sea presenta las distintas vistas en [Content()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/Content.js) .                   
 
+
+### Contenido mostrado
 1. [ContainerCard()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/ContainerCard.js) 
 
    Crea un div container, hace una peticion fetch pasandole como parametro la ruta de la api, y renderiza el array recibido en formato JSON usando un foreach y creando un PostCard() por cada elemento.
