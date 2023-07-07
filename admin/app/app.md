@@ -40,22 +40,24 @@ Cada boton del **menu** cambia el **hash**, haciendo que se ejecute **Router()**
 ### Contenido mostrado
 1. [ContainerCard()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/ContainerCard.js) 
 
-   Crea un div container, hace una peticion fetch al archivo pasado por parametro:
+   Crea un div container, hace una peticion fetch a alguno de estos archivos:
     1. [post_get_my-posts.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_get_my-posts.php) obteniedo el total de las entradas cargadas por el usuario.
     1. [post_get_pending.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_get_pending.php) obteniendo las entradas con **id_estado == 2** que representa las entradas que estan a la espera de ser revisadas y publicadas.
     1. [post_get_published.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_get_published.php) obteniendo las entradas con **id_estado == 3** que son las entradas publicadas.
    
     y renderiza el array recibido en formato JSON usando un foreach y creando un **PostCard()** por cada elemento.
-   * [PostCard()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PostCard.js) esta conformado por
-     * [PostInfo()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PostInfo.js) que muestra la informacion de la entrada 
-     * [ButtonGroup()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/ButtonGroup.js) añade los 
-       * [Button()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/Button.js) que corresponda. Estos botones reciben como parametro la accion que deben realizar con el evento click del archivo [post-actions.js](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/js/post-actions.js), y se les añade informacion del post pasada por parametro como atributo **data**.
+   * [PostCard()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PostCard.js) 
+     * [PostInfo()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PostInfo.js) 
+     * [ButtonGroup()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/ButtonGroup.js) 
+       * [Button()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/Button.js) Estos botones reciben como parametro funcion que deben ejecutar del archivo [post-actions.js](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/js/post-actions.js), y la infromacion del post que sera seteada como atributo **data**.
 
              $btn.setAttribute('data-id', id)
              $btn.setAttribute('data-estado', estado)
              $btn.setAttribute('data-posicion', posicion)
        1. ENVIAR ejecuta **sendPost()** que cumple la funcion de enviarle a [post_action_change-state.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_change-state.php) el nuevo **_id_estado = 2_** para que se actualice en la base de datos.
-       1. EDITAR ejecuta **editPost()** que cambia el hash a _#editar_ lo que provoca la ejecucion del **Router()** con el formulario de carga. luego se hace una peticion fetch al archivo [post_get_post.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_get_post.php) para traer los datos del post en cuestion y carga los valores del mismo en los campos correpondientes.
+       1. EDITAR ejecuta **editPost()** que cambia el hash
+ con `window.location.hash = '#/editar'`
+   haciendo que se ejecute **Router()** añadiedo el formulario de carga. luego se hace una peticion fetch al archivo [post_get_post.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_get_post.php) para traer los datos del post a editar y carga los valores del mismo en los campos correpondientes.
        1. ELIMINAR ejecuta **deletePost()** que envia el **id** del post seleccionado a [post_action_delete.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_delete.php) para que sea removido de la base de datos. 
        1. RECHAZAR ejecuta **rejectPost()** que al contrario de **sentPost()** cambia el **id_estado = 1** a travez de [post_action_change-state.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_change-state.php) .
        1. PUBLICAR ejecuta **publishPost()** que ademas de actualizar el **_id_estado = 3_** envia el **_id_posicion_** (seleccionado por el usuario) a [post_action_publish.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_publish.php) donde se actualizan los valores y se reorganizan las posiciones.

@@ -1,4 +1,5 @@
 
+
 .panel__brand {
     width: 100%;
 }
@@ -71,7 +72,7 @@
 }
 
 .panel__menu {
-    border-right: 2px solid rgba(41, 41, 41, 0.89);
+    /* border-right: 2px solid rgba(41, 41, 41, 0.89); */
     width: 100%;
     min-width: 150px;
     padding: 10px 2px;
@@ -113,13 +114,13 @@
     height: 60px;
     display: flex;
     align-items: center;
-    /* align-items: center; */
-    border-bottom: 1px solid rgba(41, 41, 41, 0.89);
+    padding: 0 3px;
 }
+
 
 .panel__nav li:hover{
     cursor: pointer;
-    background-color: rgba(41, 41, 41, 0.89);
+    background-color: var(--transparente);
 }
 
 .panel__nav .link_cerrar-sesion a {
@@ -127,9 +128,10 @@
 }
 
 .panel__nav .link__en-revision .link__notification {
-    padding: 4px;
+    padding: 5px;
+    border-radius: 5px;
     color: orange;
-    font-size: 16px;
+    background-color: var(--transparente);
 }
 
 

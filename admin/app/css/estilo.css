@@ -8,6 +8,8 @@
 :root {
     --background-1: black;
     --background-2: black;
+    --transparente: rgba(255, 244, 244, 0.147);
+    --transparente-1: rgba(248, 248, 248, 0.095);
     --background-form: rgb(204, 204, 204);
     --color-fuente-1: white;
     --color-fuente-2: gray;
@@ -59,7 +61,11 @@ textarea {
 
 
 
-
+@media(max-width: 1200px) {
+   .card__item {
+    grid-template-columns: 5fr 7fr;
+   }
+}
 
 @media(max-width: 1000px) {
     .card__wrapper {
@@ -70,6 +76,7 @@ textarea {
 
     .card__item {
         width: 100%;
+        grid-template-columns: 4fr 6fr;
     }
 
     .card__wrapper .buttons__group {
@@ -92,7 +99,7 @@ textarea {
     }
 
     .card__item {
-        flex-direction: column;
+        grid-template-columns: 5fr 6fr;
     }
 
     .card__item img {
@@ -136,6 +143,11 @@ textarea {
     .card__wrapper {
         width: 100%;
         padding: 4px;
+    }
+
+    .card__item {
+        grid-template-columns: 1fr;
+        gap: 2px;
     }
 
     .form__wrapper {
