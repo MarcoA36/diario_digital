@@ -134,6 +134,10 @@
     background-color: var(--transparente);
 }
 
+.panel__nav li:hover .link__notification{
+    background-color: transparent;
+}
+
 
 .responsive{
     background-color: red;
