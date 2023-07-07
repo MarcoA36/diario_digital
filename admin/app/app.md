@@ -71,14 +71,14 @@ Luego renderiza el array recibido en formato JSON usando un foreach y creando un
              $btn.setAttribute('data-id', id)
              $btn.setAttribute('data-estado', estado)
              $btn.setAttribute('data-posicion', posicion)
-       1. **ENVIAR** ejecuta **`sendPost()`** que cumple la funcion de enviarle a [post_action_change-state.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_change-state.php) el nuevo **_id_estado = 2_** para que se actualice en la base de datos.
-       1. **EDITAR** ejecuta **`editPost()`** que cambia el hash
+         * **ENVIAR** ejecuta **sendPost()** que cumple la funcion de enviarle a [post_action_change-state.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_change-state.php) el nuevo **_id_estado = 2_** para que se actualice en la base de datos.
+         * **EDITAR** ejecuta **editPost()** que cambia el hash
  con `window.location.hash = '#/editar'`
    haciendo que se ejecute **Router()** añadiedo el formulario de carga. luego se hace una peticion fetch al archivo [post_get_post.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_get_post.php) para traer los datos del post a editar y carga los valores del mismo en los campos correpondientes.
-       1. **ELIMINAR** ejecuta **`deletePost()`** que envia el **id** del post seleccionado a [post_action_delete.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_delete.php) para que sea removido de la base de datos. 
-       1. **RECHAZAR** ejecuta **`rejectPost()`** que al contrario de **sentPost()** cambia el **id_estado = 1** a travez de [post_action_change-state.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_change-state.php) .
-       1. **PUBLICAR** ejecuta **`publishPost()`** que ademas de actualizar el **_id_estado = 3_** envia el **_id_posicion_** (seleccionado por el usuario) a [post_action_publish.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_publish.php) donde se actualizan los valores y se reorganizan las posiciones.
-       1. **DESPUBLICAR** ejecuta **`unpublishPost()`** que actualiza los valores de estado y posicion, y le pasa el **id_posicion** actual (recibido del atributo **_data_**) a  [post_action_unpublish.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_unpublish.php) donde se actualizan los valores y se reorganizan las posiciones.  
+         * **ELIMINAR** ejecuta **deletePost()** que envia el **id** del post seleccionado a [post_action_delete.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_delete.php) para que sea removido de la base de datos. 
+         * **RECHAZAR** ejecuta **rejectPost()** que al contrario de **sentPost()** cambia el **id_estado = 1** a travez de [post_action_change-state.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_change-state.php) .
+         * **PUBLICAR** ejecuta **publishPost()** que ademas de actualizar el **_id_estado = 3_** envia el **_id_posicion_** (seleccionado por el usuario) a [post_action_publish.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_publish.php) donde se actualizan los valores y se reorganizan las posiciones.
+         * **DESPUBLICAR** ejecuta **unpublishPost()** que actualiza los valores de estado y posicion, y le pasa el **id_posicion** actual (recibido del atributo **_data_**) a  [post_action_unpublish.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_unpublish.php) donde se actualizan los valores y se reorganizan las posiciones.  
 ***
 ### vista del post seleccionado
 
@@ -99,22 +99,25 @@ Por ultimo se añade
  [PostForm()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PostForm.js) crea un formulario al que le añade el componente 
 
    * [PostEditor()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/Editor.js) para brindar herramientas basicas de edicion al contenido principal de la entrada.
+
 Tambien se le agrega el componente 
-   * [Select()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/Select.js) que se encarga de crear un elemento select y le agrega como options los resultados obtenidos de la consulta pasada por parametro. En este caso [get_categories.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/get_categories.php).              
+   * [Select()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/Select.js) que se encarga de crear un elemento select y le agrega como options los resultados obtenidos de la consulta a [get_categories.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/get_categories.php).              
  Por ultimo se añade
    *  ButtonGroup() 
        * Button()
+         * **CARGAR** ejecuta [submitPost()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/js/post-submit.js) que toma los datos cargados del formulario y los envia a [post_action_submit.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_submit.php) para que sean cargados en la base de datos si las validaciones estan aprovadas.
+
 
 ***
 ### Enviar mensaje
-4. [MessageForm()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/MessageForm.js) crea un formulario y le añade 
+[MessageForm()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/MessageForm.js) crea un formulario y le añade 
    * **Select()** que consulta a la tabla de redactores en [get_editors.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/get_editors.php).
 
 ***
 ### Lista de mensajes       
-5. [MessageItem()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/MessageItem.js) se agrega por cada elemento del objeto JSON recibido en la consulta a [message_get_sent.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/message_get_sent.php)  o [message_get_recived.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/message_get_recived.php)
+[MessageItem()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/MessageItem.js) se agrega por cada elemento del objeto JSON recibido en la consulta a [message_get_sent.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/message_get_sent.php)  o [message_get_recived.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/message_get_recived.php)
 
 ***
 
 ### Leer mensaje
-6. [MessageContent()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/MessageContent.js) al igual que PostContent(), usando `localStorage` toma los datos del item seleccionado y los muestra en forma oragnizada.
+[MessageContent()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/MessageContent.js) al igual que PostContent(), usando `localStorage` toma los datos del item seleccionado y los muestra en forma oragnizada.
