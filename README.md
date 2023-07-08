@@ -1,15 +1,28 @@
-# Nombre del Proyecto
-Breve descripción o introducción del proyecto.
+# Diario digital
+Este proyecto está diseñado para crear y administrar un diario digital en línea. Proporciona una plataforma para publicar y gestionar noticias de manera eficiente. 
+***
+---
 
-## Tabla de contenidos
-* Instalación
-* Uso
-* Carpetas y Archivos
-* Contribución
-* Licencia
+El repositorio está organizado en distintas carpetas, cada una con su función específica. Aquí se encuentra una breve descripción de las carpetas principales:
 
-### Instalación
-Indica los pasos necesarios para instalar y configurar el proyecto en un entorno local. Incluye los requisitos previos, instrucciones de instalación de dependencias y cualquier otra configuración necesaria.
+* admin: Contiene los archivos relacionados con el panel de administración del sistema.
+  * api: Contiene los archivos PHP que manejan las peticiones y consultas a la base de datos.
+  * app: Contiene los archivos relacionados con la interfaz de usuario y la lógica del cliente.
+    * css: Contiene los estilos CSS utilizados en el proyecto.
+    * js: Contiene los scripts JavaScript utilizados para la funcionalidad del sistema.
+
+
+El frontend es una clonacion de la [pagina oficial de la BBC](https://www.bbc.com/) y esta desarrollado tanto en [js](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_js) como en [php](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_php). 
+
+
+## Instalación
+1. Configura la base de datos MySQL y asegúrate de tener los datos de conexión necesarios.
+
+2. Importa el archivo SQL provisto en la carpeta database para crear la estructura de la base de datos.
+
+3. Actualiza los archivos de configuración (como config.php) con los datos de conexión a tu base de datos.
+
+4. Abre el proyecto en tu servidor local o en el navegador y comienza a usar el sistema
 
 ### Uso
 Proporciona ejemplos o instrucciones claras sobre cómo utilizar el proyecto. Esto puede incluir comandos de línea de comandos, funciones o métodos específicos que se pueden utilizar, y cualquier otra información relevante para que otros desarrolladores comprendan cómo interactuar con tu proyecto.

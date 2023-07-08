@@ -44,6 +44,6 @@ Es la tabla principal por ser la que contiene todos los datos del post. Esta con
     1. id_posicion
     1. posicion 
 
-En la tabla noticias se hacen las insersiones en [post_action_submit.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_submit.php) y en el resto de los archivos **post_action_** se hacen modificaciones al post previamente cargado.
+Las inserciones se hacen a travez de [post_action_submit.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_submit.php) y en el resto de los archivos **post_action_** se hacen modificaciones al post previamente cargado.
 
 
