@@ -10,7 +10,7 @@ hay dos **rangos** de administradores que se definen al momento de hacer el regi
  1. el rango 1 solo tiene acceso a cargar noticias y enviarlas a revisión. Pero no tiene acceso a publicar, ni a ver noticias cargadas por otro administrador.
 1. el rango 2 tiene acceso a cargar y publicar sus noticias, y las noticias recibidos por el/los administrador/res rango 1.
 
-Al momento de publicar , el administrador puede seleccionar la **posicion** que desea que ocupe la noticia en la portada. (nota principal, nota secundaria, en seccion, portada). una vez cargado el resto de las noticias es reorganizada.
+Al momento de publicar , el administrador puede seleccionar la **posicion** que desea que ocupe el post en la portada. (nota principal, nota secundaria, en seccion, portada). una vez cargado el resto de las card es reorganizada.
 
 
 ### Los archivos se organizan de la siguiente manera:
@@ -27,7 +27,6 @@ Al momento de publicar , el administrador puede seleccionar la **posicion** que 
 ## Frontend
 Desde el frontend se consulta a los archivos de **admin/api** para obtener las noticias y mostrarlas en la seccion que corresponda.
 
-La portada esta dividada en 
  * Notas principales: que es el grupo de las cinco que aparecen justo debajo del header. A su vez se divide en
 
     * Nota principal a la izquierda
@@ -36,33 +35,38 @@ La portada esta dividada en
 
 
 
-  
+ ### En JS se organizan los archivos de la siguiente manera:
 
 * **/diario_digital_js**
     
   * **/app**
-       * **/componentes**:
-       * **/config**:
-       * **/css**:
-       * **/img**:
-       * **/js**:
-  * **index.html**
+       * **/componentes**: contiene las distintas **partes de la pagina** creada a partir de **funciones js**.
+       * **/config**: contiene las configuraciones generales de la pagina
+       * **/css**: contiene los estilos de la pagina en general. En el archivo **estilo.css** se inportan todos los archivos de **/modules**.
+       * **/img**: Contienen las imagenes que se usan para crear la interfaz.
+       * **/js**: Contiene las funcionalidades.
+       * **App.js**: este archivo contiene el total de la aplicacion.
+       * **index.js**: este es el archivo que se carga en **index.html** y que ejecuta la aplicacion (App()) y el router(Router()) en cada cambio de hash.
+  * **index.html** Aqui se crea el _div_ **id='root'**, que es donde renderiza el contenido de la pagina. Para eso se incluye los archivos **estilos.css** y **index.js**.
 
 
 
-
-En diario_digital_php simplemente se divide en varios archivos con codigo html y php que representan las distintas secciones de la pagina.
+ ### En PHP 
+En diario_digital_php cada seccion de la pagina se controla en un archivo diferente.
 * **/diario_digital_php**
 
     * **/assets**
-          
       * **/css**
       * **/js**
     * **/config**
     * **/img**
     * **/js**
     * **/modules** 
-  * **index.php**
+  * **index.php** pagina principal.
+   * **page-category.php** En este archivo se muestran todas las noticias de una categoria en especifico (que se pasa por parametro. Ej: deportes, cultura, espectaculo). 
+    * **page-login.php** Pagina para loguearse.
+    * **page-search.php** Pagina con el buscador.  
+    * **page-single.php** Esta pagina muestra la noticia (que se pase el id como parametro) completa.
 
 
 
@@ -72,15 +76,10 @@ En diario_digital_php simplemente se divide en varios archivos con codigo html y
 
 2. Importa el archivo SQL provisto en la carpeta database para crear la estructura de la base de datos.
 
-3. Actualiza los archivos de configuración (como config.php) con los datos de conexión a tu base de datos.
+3. Actualiza los archivos de configuración con los datos de conexión a tu base de datos.
 
 4. Abre el proyecto en tu servidor local o en el navegador y comienza a usar el sistema
 
-### Uso
-Proporciona ejemplos o instrucciones claras sobre cómo utilizar el proyecto. Esto puede incluir comandos de línea de comandos, funciones o métodos específicos que se pueden utilizar, y cualquier otra información relevante para que otros desarrolladores comprendan cómo interactuar con tu proyecto.
-
-### Carpetas y Archivos
-Explora la estructura de carpetas y archivos clave en tu proyecto. Puedes incluir una descripción breve de cada carpeta y archivo relevante y su función en el proyecto.
 
 ### Contribución
 Si deseas que otros contribuyan a tu proyecto, describe cómo pueden hacerlo. Puedes explicar cómo los desarrolladores pueden enviar solicitudes de extracción, informar problemas o sugerir mejoras.
@@ -94,3 +93,4 @@ Si utilizaste librerías, recursos o inspiración de otros proyectos, es una bue
 ### Contacto
 Proporciona información de contacto (como correo electrónico o enlaces a tus perfiles en redes sociales) para que otros desarrolladores puedan comunicarse contigo en caso de preguntas o colaboraciones.
 
+Recuerda que el README debe ser claro, conciso y fácil de entender. Incluye la información esencial para que los desarrolladores puedan comprender rápidamente tu proyecto y comenzar a trabajar con él.
