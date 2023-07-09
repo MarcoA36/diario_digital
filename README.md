@@ -7,6 +7,8 @@ Este proyecto está diseñado para crear y administrar un diario digital en lín
 Al panel se ingresa a travez de la **pagina de login** en donde el administrador completa los campos usuario y contraseña que previamentes fueron guardados (manualmente) en la tabla **administrador** de la base de datos.
 
 hay dos **rangos** de administradores que se definen al momento de hacer el registro. 
+
+![]()
  1. el rango 1 solo tiene acceso a cargar noticias y enviarlas a revisión. Pero no tiene acceso a publicar, ni a ver noticias cargadas por otro administrador.
 1. el rango 2 tiene acceso a cargar y publicar sus noticias, y las noticias recibidos por el/los administrador/res rango 1.
 
