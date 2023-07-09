@@ -24,8 +24,6 @@ Al momento de publicar , el administrador puede seleccionar la posicion que dese
   * **/db**: Contiene la base de datos del proyecto. [ver documentacion](https://github.com/MarcoA36/diario_digital/blob/main/admin/db/db.md) 
 
 ## Frontend
-El frontend es una clonacion de la [pagina oficial de la BBC](https://www.bbc.com/) y esta desarrollado tanto en [js](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_js) como en [php](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_php). 
-
 La portada esta dividada en 
  * Notas principales: que es el grupo de las cinco que aparecen justo debajo del header. A su vez se divide en
 
