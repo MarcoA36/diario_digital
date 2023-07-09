@@ -1,5 +1,5 @@
 # Diario digital
-Este proyecto está diseñado para crear y administrar un diario digital en línea. Proporciona una plataforma para publicar y gestionar noticias, y el frontend .El frontend es una clonacion de la [pagina oficial de la BBC](https://www.bbc.com/) y esta desarrollado tanto en [js](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_js) como en [php](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_php). 
+Este proyecto está diseñado para crear y administrar un diario digital en línea. Proporciona una plataforma para publicar y gestionar noticias. El frontend es una clonacion de la [pagina oficial de la BBC](https://www.bbc.com/) y esta desarrollado tanto en [js](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_js) como en [php](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_php). 
 ***
 ---
 
