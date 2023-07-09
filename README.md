@@ -7,8 +7,6 @@ Este proyecto está diseñado para crear y administrar un diario digital en lín
 Al panel se ingresa a travez de la **pagina de login** en donde el administrador completa los campos usuario y contraseña que previamentes fueron guardados (manualmente) en la tabla **administrador** de la base de datos.
 
 hay dos **rangos** de administradores que se definen al momento de hacer el registro. 
-
-![]()
  1. el rango 1 solo tiene acceso a cargar noticias y enviarlas a revisión. Pero no tiene acceso a publicar, ni a ver noticias cargadas por otro administrador.
 1. el rango 2 tiene acceso a cargar y publicar sus noticias, y las noticias recibidos por el/los administrador/res rango 1.
 
@@ -83,16 +81,9 @@ En diario_digital_php cada seccion de la pagina se controla en un archivo difere
 4. Abre el proyecto en tu servidor local o en el navegador y comienza a usar el sistema
 
 
-### Contribución
-Si deseas que otros contribuyan a tu proyecto, describe cómo pueden hacerlo. Puedes explicar cómo los desarrolladores pueden enviar solicitudes de extracción, informar problemas o sugerir mejoras.
-
-### Licencia
-Indica la licencia bajo la cual se distribuye el proyecto. Esto es importante para que otros desarrolladores comprendan los términos y condiciones de uso del proyecto.
-
 ### Créditos
-Si utilizaste librerías, recursos o inspiración de otros proyectos, es una buena práctica dar créditos y enlaces a dichas fuentes.
+La unica fuente externa que se usa para este proyecto es **font awesone** para agregar algunos iconos.
 
 ### Contacto
-Proporciona información de contacto (como correo electrónico o enlaces a tus perfiles en redes sociales) para que otros desarrolladores puedan comunicarse contigo en caso de preguntas o colaboraciones.
+marco_95_5@yahoo.com
 
-Recuerda que el README debe ser claro, conciso y fácil de entender. Incluye la información esencial para que los desarrolladores puedan comprender rápidamente tu proyecto y comenzar a trabajar con él.

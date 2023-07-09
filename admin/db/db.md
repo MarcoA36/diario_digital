@@ -3,7 +3,7 @@
 
 
 ## tablas
-la base de datos esta conformada por 6 tablas hasta el momento.
+La base de datos esta conformada por 6 tablas hasta el momento.
 
 
 La tabla **noticias** es la que contiene todos los datos de las entradas y esta directamente relacionada con la tabla **seccion**, **administrador**, **posicion**, **estado** a travez de la clave foranea **id**. Esta conformada por los siguientes campos:
@@ -74,5 +74,3 @@ La tabla **noticias** es la que contiene todos los datos de las entradas y esta 
 Las inserciones se hacen a traves de [post_action_submit.php](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/php/post_action_submit.php). Este recibe los datos de [post-action-submit.js](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/js/post-action-submit.js), que toma los valores que el usuario ingresa en los campos del formulario [PostForm()](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/componentes/PostForm.js). 
 
  En el resto de los archivos **post_action_** se hacen modificaciones al post previamente cargado.
-
-
