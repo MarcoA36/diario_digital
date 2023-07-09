@@ -63,11 +63,11 @@
     color: var(--color-error);
 }
 
-.buttons__group>div {
+.form__wrapper .buttons__group>div {
     width: auto;
     padding: 2px;
 }
 
-.buttons__group>div:hover {
+.form__wrapper .buttons__group>div:hover {
     cursor: pointer;
 }

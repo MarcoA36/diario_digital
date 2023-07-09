@@ -3,16 +3,53 @@ Este proyecto está diseñado para crear y administrar un diario digital en lín
 ***
 ---
 
-El repositorio está organizado en distintas carpetas, cada una con su función específica. Aquí se encuentra una breve descripción de las carpetas principales:
+## Panel de administracion
+Al panel se ingresa a travez de la **pagina de login** en donde el administrador completa los campos usuario y contraseña que previamentes fueron guardados (manualmente) en la tabla **administrador** de la base de datos.
 
-* admin: Contiene los archivos relacionados con el panel de administración del sistema.
-  * api: Contiene los archivos PHP que manejan las peticiones y consultas a la base de datos.
-  * app: Contiene los archivos relacionados con la interfaz de usuario y la lógica del cliente.
-    * css: Contiene los estilos CSS utilizados en el proyecto.
-    * js: Contiene los scripts JavaScript utilizados para la funcionalidad del sistema.
+hay dos **rangos** de administradores. 
+ 1. el rango 1 solo tiene acceso a cargar post y a enviarlos (no a publicarlos).
+1. el rango 2 tiene acceso a cargar y publicar sus posts, y los post recibidos por el administrador rango 1.
 
+Al momento de publicar , el administrador puede seleccionar la posicion que desea que ocupe el card en la portada. (nota principal, nota secundaria, en seccion, portada). una vez cargado el resto de las card es reorganizada. 
+
+* **/admin**: Contiene los archivos relacionados con el panel de administración del sistema. 
+  * **/api**: Contiene los archivos PHP que manejan las peticiones y consultas a la base de datos. [ver documentacion](https://github.com/MarcoA36/diario_digital/blob/main/admin/api/api.md)
+  * **/app**: Contiene los archivos relacionados con la interfaz de usuario y la lógica del cliente. [ver documentacion](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/app.md)
+    * **/componentes**: contiene los distintos componentes que conforman la interfaz de usuario.
+    * **/css**: Contiene los estilos CSS utilizados en la interfaz.
+    * **/js**: Contiene los scripts JavaScript utilizados para la funcionalidad del sistema.
+    * **/php**: Contiene los archivos php que modifican y obtienen informacion de la base de datos.
+  * **/db**: Contiene la base de datos del proyecto. [ver documentacion](https://github.com/MarcoA36/diario_digital/blob/main/admin/db/db.md) 
 
 El frontend es una clonacion de la [pagina oficial de la BBC](https://www.bbc.com/) y esta desarrollado tanto en [js](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_js) como en [php](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_php). 
+
+* **/diario_digital_js**
+    
+  * **/app**
+       * **/componentes**:
+       * **/config**:
+       * **/css**:
+       * **/img**:
+       * **/js**:
+  * **index.html**
+
+
+
+
+En diario_digital_php simplemente se divide en varios archivos con codigo html y php que representan las distintas secciones de la pagina.
+* **/diario_digital_php**
+
+    * **/assets**
+          
+      * **/css**
+      * **/js**
+    * **/config**
+    * **/img**
+    * **/js**
+    * **/modules** 
+  * **index.php**
+
+
 
 
 ## Instalación
