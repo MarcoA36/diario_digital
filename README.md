@@ -10,7 +10,7 @@ hay dos **rangos** de administradores que se definen al momento de hacer el regi
  1. el rango 1 solo tiene acceso a cargar noticias y enviarlas a revisión. Pero no tiene acceso a publicar, ni a ver noticias cargadas por otro administrador.
 1. el rango 2 tiene acceso a cargar y publicar sus noticias, y las noticias recibidos por el/los administrador/res rango 1.
 
-Al momento de publicar , el administrador puede seleccionar la **posicion** que desea que ocupe el post en la portada. (nota principal, nota secundaria, en seccion, portada). una vez cargado el resto de las card es reorganizada.
+Al momento de publicar , el administrador puede seleccionar la **posicion** que desea que ocupe la noticia en la portada. (nota principal, nota secundaria, en seccion, portada). una vez cargado el resto de las noticias es reorganizada.
 
 
 ### Los archivos se organizan de la siguiente manera:
