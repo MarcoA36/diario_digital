@@ -1,5 +1,5 @@
 # Diario digital
-Este proyecto está diseñado para crear y administrar un diario digital en línea. Proporciona una plataforma para publicar y gestionar noticias de manera eficiente. 
+Este proyecto está diseñado para crear y administrar un diario digital en línea. Proporciona una plataforma para publicar y gestionar noticias, y el frontend .El frontend es una clonacion de la [pagina oficial de la BBC](https://www.bbc.com/) y esta desarrollado tanto en [js](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_js) como en [php](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_php). 
 ***
 ---
 
@@ -10,7 +10,9 @@ hay dos **rangos** de administradores.
  1. el rango 1 solo tiene acceso a cargar post y a enviarlos (no a publicarlos).
 1. el rango 2 tiene acceso a cargar y publicar sus posts, y los post recibidos por el administrador rango 1.
 
-Al momento de publicar , el administrador puede seleccionar la posicion que desea que ocupe el card en la portada. (nota principal, nota secundaria, en seccion, portada). una vez cargado el resto de las card es reorganizada. 
+Al momento de publicar , el administrador puede seleccionar la posicion que desea que ocupe el card en la portada. (nota principal, nota secundaria, en seccion, portada). una vez cargado el resto de las card es reorganizada.
+
+
 
 * **/admin**: Contiene los archivos relacionados con el panel de administración del sistema. 
   * **/api**: Contiene los archivos PHP que manejan las peticiones y consultas a la base de datos. [ver documentacion](https://github.com/MarcoA36/diario_digital/blob/main/admin/api/api.md)
@@ -21,7 +23,19 @@ Al momento de publicar , el administrador puede seleccionar la posicion que dese
     * **/php**: Contiene los archivos php que modifican y obtienen informacion de la base de datos.
   * **/db**: Contiene la base de datos del proyecto. [ver documentacion](https://github.com/MarcoA36/diario_digital/blob/main/admin/db/db.md) 
 
+## Frontend
 El frontend es una clonacion de la [pagina oficial de la BBC](https://www.bbc.com/) y esta desarrollado tanto en [js](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_js) como en [php](https://github.com/MarcoA36/diario_digital/tree/main/diario_digital_php). 
+
+La portada esta dividada en 
+ * Notas principales: que es el grupo de las cinco que aparecen justo debajo del header. A su vez se divide en
+
+    * Nota principal a la izquierda
+    * Notas secundarias, el grupo de las cuatro que acompañan a la nota principal.
+  * En seccion: es la fila de tres que aparece debajo de las principales. Cada categoria del diario tiene las tres ultimas noticias publicadas en la portada.
+
+
+
+  
 
 * **/diario_digital_js**
     
