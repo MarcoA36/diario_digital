@@ -6,15 +6,16 @@ Este proyecto está diseñado para crear y administrar un diario digital en lín
 ## Panel de administracion
 Al panel se ingresa a travez de la **pagina de login** en donde el administrador completa los campos usuario y contraseña que previamentes fueron guardados (manualmente) en la tabla **administrador** de la base de datos.
 
-hay dos **rangos** de administradores. 
- 1. el rango 1 solo tiene acceso a cargar post y a enviarlos (no a publicarlos).
-1. el rango 2 tiene acceso a cargar y publicar sus posts, y los post recibidos por el administrador rango 1.
+hay dos **rangos** de administradores que se definen al momento de hacer el registro. 
+ 1. el rango 1 solo tiene acceso a cargar noticias y enviarlas a revisión. Pero no tiene acceso a publicar, ni a ver noticias cargadas por otro administrador.
+1. el rango 2 tiene acceso a cargar y publicar sus noticias, y las noticias recibidos por el/los administrador/res rango 1.
 
-Al momento de publicar , el administrador puede seleccionar la posicion que desea que ocupe el card en la portada. (nota principal, nota secundaria, en seccion, portada). una vez cargado el resto de las card es reorganizada.
+Al momento de publicar , el administrador puede seleccionar la **posicion** que desea que ocupe el post en la portada. (nota principal, nota secundaria, en seccion, portada). una vez cargado el resto de las card es reorganizada.
 
 
+### Los archivos se organizan de la siguiente manera:
 
-* **/admin**: Contiene los archivos relacionados con el panel de administración del sistema. 
+* **/admin** 
   * **/api**: Contiene los archivos PHP que manejan las peticiones y consultas a la base de datos. [ver documentacion](https://github.com/MarcoA36/diario_digital/blob/main/admin/api/api.md)
   * **/app**: Contiene los archivos relacionados con la interfaz de usuario y la lógica del cliente. [ver documentacion](https://github.com/MarcoA36/diario_digital/blob/main/admin/app/app.md)
     * **/componentes**: contiene los distintos componentes que conforman la interfaz de usuario.
@@ -24,6 +25,8 @@ Al momento de publicar , el administrador puede seleccionar la posicion que dese
   * **/db**: Contiene la base de datos del proyecto. [ver documentacion](https://github.com/MarcoA36/diario_digital/blob/main/admin/db/db.md) 
 
 ## Frontend
+Desde el frontend se consulta a los archivos de **admin/api** para obtener las noticias y mostrarlas en la seccion que corresponda.
+
 La portada esta dividada en 
  * Notas principales: que es el grupo de las cinco que aparecen justo debajo del header. A su vez se divide en
 
@@ -91,4 +94,3 @@ Si utilizaste librerías, recursos o inspiración de otros proyectos, es una bue
 ### Contacto
 Proporciona información de contacto (como correo electrónico o enlaces a tus perfiles en redes sociales) para que otros desarrolladores puedan comunicarse contigo en caso de preguntas o colaboraciones.
 
-Recuerda que el README debe ser claro, conciso y fácil de entender. Incluye la información esencial para que los desarrolladores puedan comprender rápidamente tu proyecto y comenzar a trabajar con él.
