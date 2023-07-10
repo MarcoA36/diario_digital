@@ -49,7 +49,7 @@ function editorContent() {
     $editor_content.id = "cargar-cuerpo"
     $editor_content.contentEditable = true;
     // $editor_content.textContent = "Escriba su texto aqui..."
-    $editor_content.innerHTML = '<p>Escriba su texto aquí...</p>'
+    $editor_content.innerHTML = '<p>Escriba aquí...</p>'
 
     return $editor_content
 }
@@ -58,6 +58,7 @@ function editor_titles(e, nombre) {
     const $element = document.createElement('button')
     $element.textContent = nombre
     $element.addEventListener('click', () => {
+      event.preventDefault();
         console.log('dsa')
         tag(e)
     })
@@ -81,6 +82,7 @@ function tag(tag) {
 
 function editor_fontStyle(nombre, style) {
     const $element = document.createElement('button')
+    $element.type = 'button'
     $element.textContent = nombre
     $element.addEventListener('click', () => {
         fontStyle(style)

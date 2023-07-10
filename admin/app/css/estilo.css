@@ -65,6 +65,10 @@ textarea {
    .card__item {
     grid-template-columns: 5fr 7fr;
    }
+
+   .form__wrapper{
+    width: 64%;
+   }
 }
 
 @media(max-width: 1000px) {
