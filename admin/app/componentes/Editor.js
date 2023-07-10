@@ -59,7 +59,7 @@ function editor_titles(e, nombre) {
     $element.textContent = nombre
     $element.addEventListener('click', () => {
       event.preventDefault();
-        console.log('dsa')
+        console.log('dsas')
         tag(e)
     })
 
