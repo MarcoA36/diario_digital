@@ -1,3 +1,4 @@
+
 export function sendPost() {
     let idPost = this.getAttribute('data-id')
     let estadoPost = this.getAttribute('data-estado')
@@ -38,6 +39,7 @@ export function sendPost() {
         })
 }
 
+import { Router } from "./Router.js";
 
 export function rejectPost() {
     let idPost = this.getAttribute('data-id')
@@ -61,6 +63,7 @@ export function rejectPost() {
                 (res)
                 if (res.estado === true) {
                     contenido.removeChild(post) 
+                    Router()//se ejecuta router para que se reorganizen los post
                 }else{
                     console.log('error en la consulta')
                 }
@@ -116,6 +119,7 @@ export function unpublishPost() {
                 (res)
                 if (res.estado === true) {
                     contenido.removeChild(post) 
+                    Router()//se ejecuta router para que se reorganizen los post
                 }else{
                     console.log('error en la consulta')
                 }
@@ -165,6 +169,7 @@ export function deletePost() {
                 console.log(res)
                 if (res.estado === true) {
                     contenido.removeChild(post) 
+                    Router()//se ejecuta router para que se reorganizen los post
                 }else{
                     console.log('error en la consulta')
                 }

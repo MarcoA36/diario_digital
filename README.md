@@ -74,9 +74,11 @@ En diario_digital_php cada seccion de la pagina se controla en un archivo difere
 ## Instalación
 1. Configura la base de datos MySQL y asegúrate de tener los datos de conexión necesarios.
 
-2. Importa el archivo SQL provisto en la carpeta database para crear la estructura de la base de datos.
+2. Importa el archivo SQL provisto en la carpeta [**admin/db/diario_digital.sql**](https://github.com/MarcoA36/diario_digital/blob/main/admin/db/diario_digital.sql)  para crear la estructura de la base de datos.
 
 3. Actualiza los archivos de configuración con los datos de conexión a tu base de datos.
+  * **admin/api/conexion.php**
+  * **admin/app/php/conexion.php**
 
 4. Abre el proyecto en tu servidor local o en el navegador y comienza a usar el sistema
 

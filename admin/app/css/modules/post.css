@@ -13,6 +13,10 @@
     display: flex;
     justify-content: space-between;
 }
+.post__wrapper .buttons__group .button__item {
+    cursor: pointer;
+    width: auto;
+}
 
 .post__wrapper .card__image {
     width: 80%;

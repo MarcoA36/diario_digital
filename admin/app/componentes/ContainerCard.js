@@ -82,3 +82,4 @@ export function ContainerCard(ruta, estado, ruta_consulta) {
     return $container;
 }
 
+
