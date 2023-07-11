@@ -5,9 +5,8 @@ export function ContainerCard(ruta, estado, ruta_consulta) {
     $container.id = 'container-card';
     $container.classList.add('card__container');
 
-    let paginaActual = 1;
-    const resultadosPorPagina = 3;
-
+    let paginaActual = localStorage.getItem('paginaActual') || 1;
+    const resultadosPorPagina = 5;
     let noticias = [];
 
     const cargarNoticias = () => {
@@ -36,6 +35,8 @@ export function ContainerCard(ruta, estado, ruta_consulta) {
         if (noticias.length > 1 * resultadosPorPagina) {
             BotonesNavegacion();
         }     
+
+        localStorage.setItem('paginaActual', paginaActual);
     };
 
       const BotonesNavegacion = () => {
@@ -52,7 +53,10 @@ export function ContainerCard(ruta, estado, ruta_consulta) {
         const $btnAnterior = document.createElement('button');
         $btnAnterior.textContent = '< Anterior';
         $btnAnterior.classList.add('button__page--previous')
-        if (paginaActual === 1) {
+        // if (paginaActual === 1) {
+        //     $btnAnterior.style.display="none"
+        // }
+        if (paginaActual == 1) {
             $btnAnterior.style.display="none"
         }
 
@@ -76,6 +80,19 @@ export function ContainerCard(ruta, estado, ruta_consulta) {
 
         $container.appendChild($navegacion);
       };
+
+
+      //verificar si cambio el hash para resetear la paginaActual
+      const checkHashChange = () => {
+        const currentHash = window.location.hash;
+        const storedHash = localStorage.getItem('lastHash');   
+        if (currentHash !== storedHash) {
+          paginaActual = 1;
+          localStorage.setItem('lastHash', currentHash);
+        }
+      };
+      checkHashChange();
+
 
     cargarNoticias(paginaActual);
 
