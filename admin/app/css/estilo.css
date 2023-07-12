@@ -62,9 +62,14 @@ textarea {
 
 
 @media(max-width: 1200px) {
-   .form__wrapper{
-    width: 64%;
-   }
+    .form__wrapper {
+        width: 64%;
+    }
+
+    .post__wrapper {
+        width: 80%;
+    }
+
 }
 
 @media(max-width: 1000px) {
@@ -134,7 +139,7 @@ textarea {
         margin: auto;
     }
 
-    .form__message{
+    .form__message {
         width: 70%;
     }
 
@@ -161,11 +166,17 @@ textarea {
         gap: 2px;
     }
 
+
+    .post__wrapper {
+        width: 94%;
+    }
+
+
     .form__wrapper {
         width: 96%;
     }
 
-    .form__message{
+    .form__message {
         width: 96%;
     }
 

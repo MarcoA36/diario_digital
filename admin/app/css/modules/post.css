@@ -1,6 +1,6 @@
 
 .post__wrapper {
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 
@@ -18,8 +18,8 @@
     width: auto;
 }
 
-.post__wrapper .card__image {
-    width: 80%;
+.post__wrapper .post__image {
+    width: 70%;
     margin: auto;
 }
 
@@ -37,6 +37,7 @@
     background-color: rgb(36, 37, 37);
     border-radius: 10px;
     padding: 5px;
+    margin: 10px 0;
 }
 
 #cargar-posicion {
