@@ -1,0 +1,192 @@
+-/admin
+       -/api
+            -/img
+                 - Todas las imagenes cargadas en la BD se mueven a esta carpeta
+            - conexion.php
+            - post_get_category.php
+            - post_get_location-category.php
+            - post_get_location-primary.php
+            - post_get_location-secondary.php
+            - post_get_search.php
+            - post_query_category.php
+            - post_query_location-category.php
+            - post_query_location-featured.php
+            - post_query_post.php
+            - query_editors.php
+            - query_states.php
+            - validations.php
+
+       -/app
+           -/componentes
+                        - Button.js
+                        - ButtonGroup.js
+                        - ContainerCard.js
+                        - Content.js
+                        - Editor.js
+                        - ErrorMessage.js
+                        - Logo.js
+                        - MessageContent.js
+                        - MessageForm.js
+                        - MessageItem.js
+                        - PageLogin.js
+                        - Panel.js
+                        - PanelMenu.js
+                        - PanelUser.js
+                        - PostCard.js
+                        - PostContent.js
+                        - PostDetails.js
+                        - PostForm.js
+                        - PostInfo.js
+                        - Select.js
+           -/css
+                -/modules
+                         - editor.css
+                         - login.css
+                         - message.css
+                         - panel.css
+                         - post-card.css
+                         - post-form.css
+                         - post.css
+                - estilo.css
+           -/js
+               - ajax.js
+               - message_delete.js
+               - message_submit.js
+               - mesagge_open.js
+               - post-actions.js
+               - post-open.js
+               - post-submit.js
+               - Router.js
+               - session_start.js
+               - validations.js
+           -/php
+                - conexion.php
+                - get_categories.php
+                - get_editors.php
+                - get_locations.php
+                - message_action_delete.php
+                - message_action_submit.php
+                - message_get_recived.php
+                - message_get_sent.php
+                - post_action_change-state.php
+                - post_action_delete.php
+                - post_action_publish.php
+                - post_action_submit.php
+                - post_action_unpublish.php
+                - post_get_my-posts.php
+                - post_get_pending.php
+                - post_get_post.php
+                - post_get_published.php
+                - post_get_search.php
+                - query_categories.php
+                - query_editors.php
+                - query_state.php
+                - session_close.php
+                - session_start.php
+                - session_validation.php
+                - validations.php
+           - App.js
+           - index.js
+       -/db
+          - diario_digital.sql
+       -index.html
+
+
+-/front_PHP
+           -/assets
+                  -/css
+                      -/section
+                              - card.css
+                              - header&footer.css
+                              - page-category.css
+                              - page-home.css
+                              - page-login.css
+                              - page-post.css
+                              - page-search.css
+                              - sidebar.css
+                      - estilo.css
+                  -/img
+                      - imagenes que se usan en el armado del front.
+                  -/js
+                     - date.js
+                     - header-dropdown.js
+           -/config
+                  - ruta_api.php
+           -/js
+              - post-search.js
+           -/modules
+                   - card-category.php
+                   - card-primary.php
+                   - card-secondary.php
+                   - footer-login.php
+                   - footer.php
+                   - form-login.php
+                   - form-register.php
+                   - header.php
+                   - main-category.php
+                   - main-home.php
+                   - main-login.php
+                   - main-search.php
+                   - main-single.php
+                   - section-category.php
+                   - section-featured.php
+                   - sidebar.php
+           - index.php
+           - page-category.php
+           - page-login.php
+           - page-search.php
+           - page-single.php
+
+-/front_JS
+          -/app
+              -/componentes
+                          - CardCategory.js
+                          - CardPrimary.js
+                          - CardSecondary.js
+                          - Footer.js
+                          - FooterNav.js
+                          - FooterTerms.js
+                          - Header.js
+                          - HeaderLeft.js
+                          - HeaderNav.js
+                          - HeaderRight.js
+                          - Main.js
+                          - PageCategory.js
+                          - PageHome.js
+                          - PageLogin.js
+                          - PageLoginFooter.js
+                          - PageLoginForm.js
+                          - PagePost.js
+                          - PageSearch.js
+                          - SectionAllCard.js
+                          - SectionCategory.js
+                          - SectionFeatured.js
+                          - SectionFeaturedTwo
+                          - SectionTitle.js
+                          - Sidebar.js
+              -/config
+                     - ruta_api.js
+              -/css
+                   -/section
+                           - card.css
+                           - header&footer.css
+                           - page-category.css
+                           - page-home.css
+                           - page-login.css
+                           - page-post.css
+                           - page-search.css
+                           - sidebar.css
+                   - estilo.css
+              -/img
+              -/js
+                 - ajax.js
+                 - date.js
+                 - post-open.js
+                 - router.js
+              - App.js
+              - index.js
+          - index.html
+
+          ddg.txt
+
+             

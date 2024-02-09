@@ -1,0 +1,30 @@
+.page__login {
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page__login .logo *{
+    display: flex;
+}
+
+.page__login .login__wrapper {
+    margin-top: 20px;
+}
+
+.page__login form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.page__login form input {
+    height: 40px;
+    font-size: 20px;
+}
+

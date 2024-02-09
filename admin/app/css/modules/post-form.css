@@ -1,0 +1,97 @@
+@import url('editor.css');
+
+/* //////////////////////////////////// */
+/* FORMULARIO CARGAR NOTICIA */
+
+.form__wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form__wrapper {
+    width: 54%;
+    margin: auto;
+}
+
+.form__wrapper div {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form__wrapper textarea {
+    width: 100%;
+    background-color: var(--background-form);
+}
+
+
+.form__title textarea {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.form__subtitle textarea {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.editor__content {
+    min-height: 60vh;
+}
+
+.form__body textarea {
+    font-size: 16px;
+}
+
+.form__container--options>div {
+    border-bottom: 2px solid rgba(41, 41, 41, 0.89);
+    margin-bottom: 10px;
+    background-color: var(--background-form);
+    color: var(--background-1);
+}
+
+.form__section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__wrapper .buttons__group {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--borde-1);
+    font-weight: bold;
+}
+
+.form__wrapper .message-error{
+    background-color: var(--background-1);
+    color: var(--color-error);
+}
+
+.form__wrapper .buttons__group>div {
+    width: auto;
+    padding: 2px;
+}
+
+.form__wrapper .buttons__group>div:hover {
+    cursor: pointer;
+}
+
+@media(max-width: 600px) {
+    .form__title textarea {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+    .form__subtitle textarea {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    
+    .form__body {
+        height: 62vh;
+    }
+    
+    .form__body textarea {
+        font-size: 10px;
+    }
+}

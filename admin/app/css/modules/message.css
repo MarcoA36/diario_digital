@@ -1,0 +1,77 @@
+
+/*formulario*/
+.form__message {
+    margin: auto;
+    /* margin: 20px 0 0 20px; */
+    margin-top: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: none;
+}
+
+.form__message div {
+    width: 100%;
+}
+
+.form__message input,
+.form__message select,
+.form__message button {
+    height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form__message textarea {
+    width: 100%;
+}
+
+/*buzon*/
+
+.message__item {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-fuente-2);
+}
+
+.message__info {
+    width: 94%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 7fr 1fr;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.message__item .message__icon--delete,
+.message__item .message__checkbox {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.message__item .message__icon--delete:hover {
+    color: var(--color-fuente-2);
+}
+
+.message__info p {
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*mensaje completo*/
+
+.message__wrapper {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message__wrapper span {
+    font-weight: bold;
+}

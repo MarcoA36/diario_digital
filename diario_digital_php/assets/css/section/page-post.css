@@ -1,0 +1,62 @@
+
+
+/*/////////////////*/
+/* NOTA COMPLETA */
+.page-single .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post__wrapper {
+    width: 65%;
+    word-wrap: break-word;
+}
+
+.post__wrapper .post__title h1 {
+    font-size: 44px;
+}
+
+.post__wrapper .post__subtitle {
+    margin-top: 10px;
+    width: 80%;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post__wrapper .post__body {
+    margin-top: 10px;
+    width: 80%;
+}
+
+.post__wrapper .post__body p {
+    font-size: 16px;
+    
+    line-height: 20px;
+}
+
+.post__wrapper .post__date p {
+    font-size: 16px;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+.post__wrapper .post__editor {
+    margin-top: 20px;
+}
+
+.post__wrapper .post__image {
+    width: 100%;
+    margin: auto;
+}
+
+.post__wrapper .post__image img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    vertical-align: middle;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+

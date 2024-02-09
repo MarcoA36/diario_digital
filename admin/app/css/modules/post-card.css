@@ -1,0 +1,95 @@
+.card__container{
+    width: 100%;
+}
+
+.card__container .card__wrapper {
+    width: 100%;
+    border-radius: var(--border-radius-1);
+    display: grid;
+    grid-template-columns: auto 150px;
+    gap: 32px;
+    margin-bottom: 16px;
+}
+
+.card__item {
+    width: 100%;
+    border-bottom: 3px solid rgba(41, 41, 41, 0.89);
+    display: grid;
+    grid-template-columns: 25fr 75fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.card__item .card__title {
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card__item .card__subtitle {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card__item:hover {
+    cursor: pointer;
+}
+
+.card__item:hover img {
+    filter: brightness(118%);
+}
+
+.card__item img {
+    width: 100%;
+    vertical-align: middle;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.card__item .card__texts {
+    width: 100%;
+}
+
+
+.card__wrapper .buttons__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--transparente);
+    border-radius: var(--border-radius-1);
+}
+
+
+.card__wrapper .buttons__group>div:hover {
+    cursor: pointer;
+    filter: brightness(118%);
+    background-color: var(--transparente);
+}
+
+.buttons__group .button__item {
+    width: 100%;
+    text-align: center;
+    border-radius: var(--border-radius-1);
+}
+
+.card__details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button__page {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button__page button {
+    margin: auto;
+    height: 26px;
+    background-color: var(--background-1);
+    color: var(--color-fuente-1);
+}
